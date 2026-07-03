@@ -1,0 +1,747 @@
+<html class="light" lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Hồ sơ | Ngô Tấn Phước</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0f62fe",
+              "primary-hover": "#0353e9",
+              secondary: "#393939",
+              background: "#ffffff",
+              surface: "#f4f4f4",
+              "surface-hover": "#e5e5e5",
+              "on-surface": "#161616",
+              "on-surface-variant": "#525252",
+              outline: "#e0e0e0",
+              "outline-variant": "#8d8d8d",
+              error: "#da1e28",
+            },
+            borderRadius: {
+              DEFAULT: "0",
+              sm: "0",
+              md: "0",
+              lg: "0",
+              xl: "0",
+              full: "9999px",
+            },
+            spacing: {
+              "stack-sm": "16px",
+              "stack-md": "32px",
+              "stack-lg": "64px",
+              gutter: "32px",
+              "container-max": "1200px",
+              unit: "8px",
+            },
+            fontFamily: {
+              sans: ["IBM Plex Sans", "sans-serif"],
+              "body-md": ["IBM Plex Sans"],
+              "headline-md": ["IBM Plex Sans"],
+              "body-lg": ["IBM Plex Sans"],
+              "headline-lg": ["IBM Plex Sans"],
+              "display-lg": ["IBM Plex Sans"],
+              "title-lg": ["IBM Plex Sans"],
+              "label-md": ["IBM Plex Sans"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: #ffffff;
+        color: #161616;
+        font-family: "IBM Plex Sans", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        overflow: hidden;
+      }
+
+      .scroll-container {
+        height: 100vh;
+        overflow-y: auto;
+        scroll-snap-type: y mandatory;
+      }
+
+      .snap-section {
+        scroll-snap-align: start;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .carbon-card {
+        background: #f4f4f4;
+        border: 1px solid transparent;
+        transition: all 0.2s cubic-bezier(0.2, 0, 0.38, 0.9);
+      }
+
+      .carbon-card:hover {
+        background: #e5e5e5;
+        border-color: #0f62fe;
+        transform: translateY(-2px);
+      }
+
+      .progress-bar {
+        background: #e0e0e0;
+        height: 4px;
+      }
+
+      .progress-fill {
+        height: 100%;
+        background: #0f62fe;
+        transition: width 1s ease-out;
+      }
+
+      .btn-primary {
+        background-color: #0f62fe;
+        color: white;
+        padding: 14px 24px;
+        transition: all 0.2s cubic-bezier(0.2, 0, 0.38, 0.9);
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 140px;
+      }
+
+      .btn-primary:hover {
+        background-color: #0353e9;
+      }
+
+      .btn-ghost {
+        background-color: transparent;
+        color: #0f62fe;
+        padding: 14px 24px;
+        border: 1px solid #0f62fe;
+        transition: all 0.2s cubic-bezier(0.2, 0, 0.38, 0.9);
+      }
+
+      .btn-ghost:hover {
+        background-color: #0f62fe;
+        color: white;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.2, 0, 0.38, 0.9);
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .delay-1 {
+        transition-delay: 0.1s;
+      }
+      .delay-2 {
+        transition-delay: 0.2s;
+      }
+      .delay-3 {
+        transition-delay: 0.3s;
+      }
+      .delay-4 {
+        transition-delay: 0.4s;
+      }
+
+      .scroll-container::-webkit-scrollbar {
+        width: 4px;
+      }
+      .scroll-container::-webkit-scrollbar-thumb {
+        background: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body class="text-base antialiased">
+    <header
+      class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-outline"
+    >
+      <nav
+        class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto"
+      >
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 overflow-hidden bg-primary/10">
+            <img
+              alt="Logo"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlpLMfN4zyajV0zgLoM3-fdlult1KwvheW9Wk7HuE-wQNLANPj_CfffmTd7-htVdykTZBBI6voiDyqchB0oEHyH8rbM1bhzFC6eOAyGx1esqdqg1zbTs2HTgoyNXULhKVmvFdIoFKP_nmH0lSm2sjOxtTFXeu-9AwuhWm-NunbXUsFKi1SdkMhMDX_k5luICawmEWTJRd6WTOdtTAP2OebL1VJunUpCGhZcyahAzY2AoTzTGUgeyIDgiPI3_0y_bEpag"
+            />
+          </div>
+          <span class="font-semibold text-lg tracking-tight text-on-surface"
+            >NTP Portfolio</span
+          >
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            class="nav-link text-primary font-medium text-sm border-b-2 border-primary pb-1"
+            href="#home"
+            >Trang chủ</a
+          >
+          <a
+            class="nav-link text-on-surface-variant hover:text-primary transition-colors text-sm font-normal"
+            href="#skills"
+            >Kỹ năng</a
+          >
+          <a
+            class="nav-link text-on-surface-variant hover:text-primary transition-colors text-sm font-normal"
+            href="#achievements"
+            >Thành tựu</a
+          >
+          <a
+            class="nav-link text-on-surface-variant hover:text-primary transition-colors text-sm font-normal"
+            href="#projects"
+            >Dự án</a
+          >
+          <a
+            class="nav-link text-on-surface-variant hover:text-primary transition-colors text-sm font-normal"
+            href="#contact"
+            >Liên hệ</a
+          >
+        </div>
+        <button class="md:hidden text-on-surface">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </nav>
+    </header>
+    <main class="scroll-container">
+      <!-- SECTION 1: Giới thiệu (Hero) -->
+      <section class="snap-section bg-white" id="home">
+        <div class="px-gutter max-w-container-max mx-auto w-full">
+          <div class="flex flex-col items-center text-center space-y-8">
+            <div
+              class="reveal w-32 h-32 md:w-44 md:h-44 mx-auto rounded-full overflow-hidden border border-outline p-1 bg-white"
+            >
+              <img
+                alt="Ngô Tấn Phước"
+                class="w-full h-full object-cover rounded-full"
+                src="./avatar.png"
+              />
+            </div>
+            <div class="space-y-4 reveal delay-1">
+              <h1
+                class="text-4xl md:text-5xl font-light text-on-surface tracking-tight"
+              >
+                Ngô Tấn Phước
+              </h1>
+              <p
+                class="text-xl md:text-2xl text-primary font-normal tracking-wide"
+              >
+                Sinh viên Mạng và An ninh mạng
+              </p>
+              <p
+                class="text-base text-on-surface-variant max-w-xl mx-auto font-light leading-relaxed"
+              >
+                Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn
+                (VKU).<br />
+                Đam mê thiết kế hệ thống mạng an toàn và tối ưu hóa hiệu năng
+                vận hành thông qua tự động hóa CI/CD.
+              </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4 reveal delay-2">
+              <a class="btn-primary" href="#projects">
+                Xem dự án
+                <span class="material-symbols-outlined ml-4 text-sm"
+                  >arrow_forward</span
+                >
+              </a>
+              <a class="btn-ghost" href="#contact">Liên hệ</a>
+              <a
+                class="btn-ghost !bg-on-surface !text-white !border-on-surface hover:!bg-primary hover:!border-primary"
+                download="NgoTanPhuoc__CV.pdf"
+                href="./NgoTanPhuoc__CV.pdf"
+                target="_blank"
+              >
+                Tải CV
+                <span class="material-symbols-outlined ml-4 text-sm"
+                  >download</span
+                >
+              </a>
+            </div>
+            <div class="reveal delay-3 w-full max-w-3xl pt-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+                <div
+                  class="flex items-center gap-3 p-4 bg-surface border-l-4 border-primary"
+                >
+                  <span class="material-symbols-outlined text-primary text-xl"
+                    >event</span
+                  >
+                  <div>
+                    <p
+                      class="text-[10px] text-on-surface-variant uppercase tracking-wider font-bold"
+                    >
+                      Năm sinh
+                    </p>
+                    <p class="text-sm font-medium">2004</p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-3 p-4 bg-surface border-l-4 border-primary"
+                >
+                  <span class="material-symbols-outlined text-primary text-xl"
+                    >school</span
+                  >
+                  <div>
+                    <p
+                      class="text-[10px] text-on-surface-variant uppercase tracking-wider font-bold"
+                    >
+                      Trường đại học
+                    </p>
+                    <p class="text-sm font-medium">Đại học VKU</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 2: Kỹ năng -->
+      <section class="snap-section bg-surface/30" id="skills">
+        <div class="px-gutter max-w-container-max mx-auto w-full">
+          <div class="text-center reveal mb-12">
+            <h2 class="text-3xl font-light text-on-surface">Kỹ năng</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div
+              class="carbon-card p-6 flex flex-col h-full bg-white reveal delay-1"
+            >
+              <div class="flex items-start justify-between mb-8">
+                <span class="material-symbols-outlined text-primary text-3xl"
+                  >router</span
+                >
+                <span class="text-sm font-semibold">90%</span>
+              </div>
+              <h4 class="text-lg font-medium mb-2">Quản trị Mạng</h4>
+              <div class="progress-bar mb-4">
+                <div class="progress-fill" style="width: 90%"></div>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-auto">
+                Cisco, Định tuyến, Chuyển mạch, VPN, Tường lửa.
+              </p>
+            </div>
+            <div
+              class="carbon-card p-6 flex flex-col h-full bg-white reveal delay-2"
+            >
+              <div class="flex items-start justify-between mb-8">
+                <span class="material-symbols-outlined text-primary text-3xl"
+                  >terminal</span
+                >
+                <span class="text-sm font-semibold">85%</span>
+              </div>
+              <h4 class="text-lg font-medium mb-2">Linux &amp; Security</h4>
+              <div class="progress-bar mb-4">
+                <div class="progress-fill" style="width: 85%"></div>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-auto">
+                Ubuntu, CentOS, Shell Scripting, Bảo mật máy chủ.
+              </p>
+            </div>
+            <div
+              class="carbon-card p-6 flex flex-col h-full bg-white reveal delay-3"
+            >
+              <div class="flex items-start justify-between mb-8">
+                <span class="material-symbols-outlined text-primary text-3xl"
+                  >precision_manufacturing</span
+                >
+                <span class="text-sm font-semibold">75%</span>
+              </div>
+              <h4 class="text-lg font-medium mb-2">Automation</h4>
+              <div class="progress-bar mb-4">
+                <div class="progress-fill" style="width: 75%"></div>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-auto">
+                Ansible, Playbooks, IaC, Quản lý tài nguyên.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 3: Thành tựu -->
+      <section class="snap-section bg-white" id="achievements">
+        <div class="px-gutter max-w-container-max mx-auto w-full">
+          <div class="text-center reveal mb-12">
+            <h2 class="text-3xl font-light text-on-surface">Thành tựu</h2>
+          </div>
+          <div
+            class="carbon-card overflow-hidden bg-white max-w-5xl mx-auto shadow-sm reveal delay-1"
+          >
+            <div class="flex flex-col md:flex-row">
+              <div
+                class="md:w-1/2 aspect-video md:aspect-auto h-64 md:h-auto overflow-hidden"
+              >
+                <img
+                  alt="ZK Core Hackathon"
+                  class="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBrY_n2kri5sZ1U5xxrLDIKUb-VUO3I2r-RbWTsE21-dWfTsZXDqbfj_hb2d-ZeJHHcV6tLZs8gw-h9nUJ2GlJA4LNUFsB0Bl7P2j2Oc4URlUY8VIcJKy_ziNVO2pLpg2VTj9InaWcD1OEknhvfaP0m7Ey2r3SPVIhenUtg7DH5P_7KNs1E0TKhIETYFf4ZrCvgQPU49g4T3Fvu6x0tYhs-9kq-AjA1fNERONIkebb-nNxbJK7Rmq4JSCPqMQUTmZIaQ"
+                />
+              </div>
+              <div
+                class="p-8 md:w-1/2 flex flex-col justify-center bg-surface/50"
+              >
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="material-symbols-outlined text-primary"
+                    >emoji_events</span
+                  >
+                  <span
+                    class="text-xs font-bold text-primary uppercase tracking-widest"
+                    >Giải thưởng nổi bật</span
+                  >
+                </div>
+                <h3 class="text-2xl font-medium text-on-surface mb-4">
+                  Giải Nhì ZK Core Hackathon
+                </h3>
+                <p class="text-on-surface-variant leading-relaxed text-sm">
+                  Ghi nhận cho sự xuất sắc trong nghiên cứu và triển khai công
+                  nghệ zero-knowledge (ZKP) trong các hệ thống xác thực bảo mật.
+                  Dự án tập trung vào tối ưu hóa hiệu suất chứng minh và bảo vệ
+                  quyền riêng tư.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 4: Dự án -->
+      <section class="snap-section bg-surface/30" id="projects">
+        <div class="px-gutter max-w-container-max mx-auto w-full">
+          <h2
+            class="text-3xl font-light text-on-surface mb-12 text-center reveal"
+          >
+            Dự án tiêu biểu
+          </h2>
+          <div class="grid md:grid-cols-3 gap-px bg-outline reveal delay-1">
+            <!-- Dự án 1 -->
+            <div class="bg-white group p-px">
+              <div class="relative overflow-hidden aspect-video">
+                <img
+                  alt="Nagios Monitoring"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  src="https://lh3.googleusercontent.com/aida/AP1WRLv-bm5jijnuB2srXndis1S6gEq1afKZzpTCha1Q4zDRdowflFy1DUOaMZ-vSNz-o-eD_ch_dKwVJRRgrNEU9aXljfEu86RPyDTJkxqOQplAW1JNcMMFiYm81d7NMsnEYC81MdmXKbuF3FSMK3bUXABqJe6TBWuiOoB3LL6hbYDcVcVCADNwpO5qPYluIV8QS7mTe0So3SO4fr3Z5gTvB1fVloqXLAUzLoEwpo1OmMY96pQOeJ5AiZUCqg"
+                />
+                <div
+                  class="absolute top-0 left-0 bg-primary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-tighter"
+                >
+                  Giám sát
+                </div>
+              </div>
+              <div
+                class="p-6 bg-surface group-hover:bg-white transition-colors"
+              >
+                <h4
+                  class="text-lg font-normal text-on-surface group-hover:text-primary transition-colors"
+                >
+                  Giám sát Nagios
+                </h4>
+                <p
+                  class="text-xs text-on-surface-variant mt-2 mb-4 line-clamp-2"
+                >
+                  Hệ thống giám sát mạng thời gian thực với cảnh báo tự động qua
+                  Email/Telegram.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="text-[10px] border border-outline-variant px-2 py-0.5 uppercase font-semibold"
+                    >SNMP</span
+                  >
+                  <span
+                    class="text-[10px] border border-outline-variant px-2 py-0.5 uppercase font-semibold"
+                    >Linux</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Dự án 2 -->
+            <div class="bg-white group p-px">
+              <div class="relative overflow-hidden aspect-video">
+                <img
+                  alt="ZKP Authentication"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  src="https://lh3.googleusercontent.com/aida/AP1WRLvig2wn--VYVbhPkSVe5ekHysp-rX1uOIpRbQJon8zHW_64efKIT3vGlb9WFoZ7_obNaLmlYnDPB-9KXJzZnQ1hcEyyI-hm530e3q1VjsXtGBO-lSkEVAuOmVrUE3-aNNXbub63C0eC1klDIP8YPScMFrUkt6L5hdz0jtwuSfM-RxOXf-2o49yArGpduvDRez3KcnYBTBVq62Xs2WR-PnyRj05nt9CuFldpqJDMCf58BZ8y7mLDi4o86zM"
+                />
+                <div
+                  class="absolute top-0 left-0 bg-primary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-tighter"
+                >
+                  Bảo mật
+                </div>
+              </div>
+              <div
+                class="p-6 bg-surface group-hover:bg-white transition-colors"
+              >
+                <h4
+                  class="text-lg font-normal text-on-surface group-hover:text-primary transition-colors"
+                >
+                  Xác thực ZKP
+                </h4>
+                <p
+                  class="text-xs text-on-surface-variant mt-2 mb-4 line-clamp-2"
+                >
+                  Triển khai cơ chế xác thực bảo vệ quyền riêng tư bằng mật mã
+                  học hiện đại.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="text-[10px] border border-outline-variant px-2 py-0.5 uppercase font-semibold"
+                    >Cryptography</span
+                  >
+                  <span
+                    class="text-[10px] border border-outline-variant px-2 py-0.5 uppercase font-semibold"
+                    >Security</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Dự án 3 -->
+            <div class="bg-white group p-px">
+              <div class="relative overflow-hidden aspect-video">
+                <img
+                  alt="Network Automation"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  src="https://lh3.googleusercontent.com/aida/AP1WRLs4bXeawRvodfEI7Fmmu0Q_K3wAE7wIus3n4FWyhTSl1xqwyBXAkiEMzbGxLTX9i3iGMVyUpDqTvPjY_IiUNa7CrgKFc4MAtqWgKbvfazLSRTbEEooMHhgUVtOV8IxsYWnrxfdo8Z0MaJk4VHxsMQQ3OdtdHWfCWjCM-_09q2GXOe724t_U8PlNG2PfzcDLAubIVN7RjR47o04lOKw3tEvwoLWV5O8DFhQxxmfboCQ2bkoOwiZH0Cbe5QI"
+                />
+                <div
+                  class="absolute top-0 left-0 bg-primary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-tighter"
+                >
+                  Tự động hóa
+                </div>
+              </div>
+              <div
+                class="p-6 bg-surface group-hover:bg-white transition-colors"
+              >
+                <h4
+                  class="text-lg font-normal text-on-surface group-hover:text-primary transition-colors"
+                >
+                  Automation Mạng
+                </h4>
+                <p
+                  class="text-xs text-on-surface-variant mt-2 mb-4 line-clamp-2"
+                >
+                  Tự động hóa triển khai và cấu hình hàng loạt thiết bị mạng
+                  Cisco/Juniper.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="text-[10px] border border-outline-variant px-2 py-0.5 uppercase font-semibold"
+                    >Ansible</span
+                  >
+                  <span
+                    class="text-[10px] border border-outline-variant px-2 py-0.5 uppercase font-semibold"
+                    >Python</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 text-center reveal delay-2">
+            <a class="btn-ghost" href="#">Xem tất cả dự án</a>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 5: Liên hệ & Footer -->
+      <section class="snap-section bg-white" id="contact">
+        <div
+          class="px-gutter max-w-container-max mx-auto w-full h-full flex flex-col"
+        >
+          <div class="flex-grow flex items-center pt-24 pb-8">
+            <div
+              class="bg-white p-8 md:p-12 text-left border border-outline w-full reveal"
+            >
+              <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                  <h2 class="text-3xl font-light text-on-surface mb-6">
+                    Kết nối ngay
+                  </h2>
+                  <p
+                    class="text-base text-on-surface-variant font-light max-w-md leading-relaxed"
+                  >
+                    Bạn có dự án cần bảo mật hay muốn trao đổi về hạ tầng mạng?
+                    Đừng ngần ngại liên hệ với tôi.
+                  </p>
+                  <div class="mt-8 flex flex-col gap-6">
+                    <a
+                      class="flex items-center gap-4 group"
+                      href="mailto:phuocngopro1@gmail.com"
+                    >
+                      <div
+                        class="w-10 h-10 bg-surface border border-outline flex items-center justify-center group-hover:border-primary transition-colors"
+                      >
+                        <span class="material-symbols-outlined text-primary"
+                          >mail</span
+                        >
+                      </div>
+                      <div>
+                        <p
+                          class="text-[9px] uppercase font-bold text-outline-variant tracking-widest"
+                        >
+                          Email trực tiếp
+                        </p>
+                        <p class="text-base font-medium">
+                          phuocngopro1@gmail.com
+                        </p>
+                      </div>
+                    </a>
+                    <a
+                      class="flex items-center gap-4 group"
+                      href="tel:+84774548764"
+                    >
+                      <div
+                        class="w-10 h-10 bg-surface border border-outline flex items-center justify-center group-hover:border-primary transition-colors"
+                      >
+                        <span class="material-symbols-outlined text-primary"
+                          >phone</span
+                        >
+                      </div>
+                      <div>
+                        <p
+                          class="text-[9px] uppercase font-bold text-outline-variant tracking-widest"
+                        >
+                          Điện thoại
+                        </p>
+                        <p class="text-base font-medium">077 454 8764</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                  <label class="block">
+                    <span
+                      class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2 block"
+                      >Lời nhắn của bạn</span
+                    >
+                    <textarea
+                      class="w-full bg-surface border border-outline p-4 focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all h-32 text-sm"
+                      placeholder="Xin chào Phước, tôi muốn thảo luận về..."
+                    ></textarea>
+                  </label>
+                  <button class="btn-primary w-full md:w-max">
+                    Gửi yêu cầu
+                    <span class="material-symbols-outlined ml-4 text-sm"
+                      >send</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Footer -->
+          <footer
+            class="w-full py-8 border-t border-outline reveal delay-2 shrink-0"
+          >
+            <div
+              class="flex flex-col md:flex-row justify-between items-center gap-6"
+            >
+              <div class="flex items-center gap-3">
+                <div class="w-6 h-6 bg-primary/10 overflow-hidden">
+                  <img
+                    alt="Logo"
+                    class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlpLMfN4zyajV0zgLoM3-fdlult1KwvheW9Wk7HuE-wQNLANPj_CfffmTd7-htVdykTZBBI6voiDyqchB0oEHyH8rbM1bhzFC6eOAyGx1esqdqg1zbTs2HTgoyNXULhKVmvFdIoFKP_nmH0lSm2sjOxtTFXeu-9AwuhWm-NunbXUsFKi1SdkMhMDX_k5luICawmEWTJRd6WTOdtTAP2OebL1VJunUpCGhZcyahAzY2AoTzTGUgeyIDgiPI3_0y_bEpag"
+                  />
+                </div>
+                <span class="text-lg font-medium tracking-tight"
+                  >NTP Portfolio</span
+                >
+              </div>
+              <p class="text-on-surface-variant text-xs font-light">
+                © 2026 Ngô Tấn Phước. Kiến tạo hạ tầng mạng an toàn.
+              </p>
+              <div class="flex gap-8 text-xs text-on-surface-variant">
+                <a class="hover:text-primary transition-colors" href="#"
+                  >GitHub</a
+                >
+                <a class="hover:text-primary transition-colors" href="#"
+                  >LinkedIn</a
+                >
+              </div>
+            </div>
+          </footer>
+        </div>
+      </section>
+    </main>
+    <script>
+      const observerOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".reveal").forEach((el) => {
+        observer.observe(el);
+      });
+
+      const sections = document.querySelectorAll(".snap-section");
+      const navLinks = document.querySelectorAll(".nav-link");
+      const scrollContainer = document.querySelector(".scroll-container");
+
+      scrollContainer.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollContainer.scrollTop >= sectionTop - sectionHeight / 3) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove(
+            "text-primary",
+            "border-b-2",
+            "border-primary",
+            "font-medium",
+          );
+          link.classList.add("text-on-surface-variant", "font-normal");
+          if (link.getAttribute("href").includes(current)) {
+            link.classList.remove("text-on-surface-variant", "font-normal");
+            link.classList.add(
+              "text-primary",
+              "border-b-2",
+              "border-primary",
+              "font-medium",
+            );
+          }
+        });
+      });
+
+      navLinks.forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetID = this.getAttribute("href");
+          const targetElement = document.querySelector(targetID);
+
+          if (targetElement) {
+            scrollContainer.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
